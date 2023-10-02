@@ -3,9 +3,12 @@ water = int(input())
 efforts = 0
 extinguished_fire_levels = []
 
+# for cell in all_fires:
 for cell in range(len(all_fires)):
     type_of_fire = all_fires[cell].split(" = ")[0]
     level_of_fire = int(all_fires[cell].split(" = ")[1])
+    # type_of_fire, fire_value = cell.split(" = ")
+    # level_of_fire = int(fire_value)
     if type_of_fire == "High":
         if level_of_fire not in range(81, 125 + 1):
             continue
