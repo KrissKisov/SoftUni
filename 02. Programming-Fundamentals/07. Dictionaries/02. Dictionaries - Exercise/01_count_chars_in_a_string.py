@@ -5,7 +5,8 @@ for char in string:
     if char == ' ':
         continue
 
-    if char not in characters_count:
+    # if char not in characters_count:
+    if char not in characters_count.keys():
         characters_count[char] = 0
     characters_count[char] += 1
 
