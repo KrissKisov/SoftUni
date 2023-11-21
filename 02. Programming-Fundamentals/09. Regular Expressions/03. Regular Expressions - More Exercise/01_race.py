@@ -20,5 +20,6 @@ while command != "end of race":
         results[name] += distance
     command = input()
 
+# creating list wit keys from results dictionary, sorted by dictionary's values in descending order and limited to 3.
 sorted_results = [key for key, value in sorted(results.items(), key=lambda x: x[1], reverse=True)[:3]]
 print(f"1st place: {sorted_results[0]}\n2nd place: {sorted_results[1]}\n3rd place: {sorted_results[2]}")
