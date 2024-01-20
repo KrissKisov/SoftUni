@@ -37,13 +37,13 @@ rows, columns = [int(x) for x in input().split()]
 matrix = [[int(x) for x in input().split()] for _ in range(rows)]
 
 max_sum = float('-inf')
-max_sub_matrix = tuple()
+max_sub_matrix = []
 
 for row in range(rows - 2):
     for col in range(columns - 2):
         if sum(matrix[row][col:col+3]) + sum(matrix[row+1][col:col+3]) + sum(matrix[row+2][col:col+3]) > max_sum:
             max_sum = sum(matrix[row][col:col+3]) + sum(matrix[row+1][col:col+3]) + sum(matrix[row+2][col:col+3])
-            max_sub_matrix = (matrix[row][col:col+3], matrix[row+1][col:col+3], matrix[row+2][col:col+3])
+            max_sub_matrix = [matrix[row][col:col+3], matrix[row+1][col:col+3], matrix[row+2][col:col+3]]
 
 print(f"Sum = {max_sum}")
 for i in range(len(max_sub_matrix)):
