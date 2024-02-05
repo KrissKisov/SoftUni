@@ -4,6 +4,7 @@
 #
 # file = open(path, "w")
 # file.write("I just created my first file!")
+# file.close()
 
 
 # import os
