@@ -2,9 +2,9 @@ import os
 import re
 
 
-words_path = os.path.join("new_folder", "words.txt")
-text_path = os.path.join("new_folder", "input.txt")
-output_path = os.path.join("new_folder", "output_text.txt")
+words_path = os.path.join("files_folder", "words.txt")
+text_path = os.path.join("files_folder", "input.txt")
+output_path = os.path.join("files_folder", "output_text.txt")
 
 with open(words_path, "w") as file:
     file.write("quick is fault")

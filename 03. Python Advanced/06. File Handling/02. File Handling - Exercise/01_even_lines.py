@@ -4,7 +4,7 @@ import os
 symbols = ("-", ",", ".", "!", "?")
 
 ABS_PATH = os.path.join(os.path.dirname(__file__))
-path = os.path.join(ABS_PATH, "new_folder", "text.txt")
+path = os.path.join(ABS_PATH, "files_folder", "text.txt")
 
 with open(path) as file:
     text = file.readlines()

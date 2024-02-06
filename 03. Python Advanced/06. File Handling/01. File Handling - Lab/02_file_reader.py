@@ -1,6 +1,6 @@
 import os
 
-path = os.path.join("new_folder", "numbers.txt")
+path = os.path.join("files_folder", "numbers.txt")
 
 file = open(path)
 total_sum = 0

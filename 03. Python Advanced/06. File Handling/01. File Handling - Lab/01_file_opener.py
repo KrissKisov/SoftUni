@@ -1,7 +1,7 @@
 import os.path
 
 file_name = "text.txt"
-path = os.path.join("new_folder", file_name)
+path = os.path.join("files_folder", file_name)
 
 try:
     file = open(path)

@@ -4,8 +4,8 @@ from string import punctuation
 
 
 ABS_PATH = os.path.join(os.path.dirname(__file__))
-path = os.path.join(ABS_PATH, "new_folder", "text.txt")
-output_file = os.path.join(ABS_PATH, "new_folder", "output.txt")
+path = os.path.join(ABS_PATH, "files_folder", "text.txt")
+output_file = os.path.join(ABS_PATH, "files_folder", "output.txt")
 
 with open(path) as file:
     text = file.readlines()
