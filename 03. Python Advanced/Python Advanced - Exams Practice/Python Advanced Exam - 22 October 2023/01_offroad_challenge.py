@@ -17,6 +17,7 @@ for i in range(1, SEQUENCES_LENGTH + 1):
 
     result = fuel - consumption
     current_altitude = f"Altitude {i}"
+
     if result >= needed_fuel:
         reached_altitude.append(current_altitude)
         print(f"John has reached: {current_altitude}")
