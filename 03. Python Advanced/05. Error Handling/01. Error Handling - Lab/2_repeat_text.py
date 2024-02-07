@@ -6,7 +6,7 @@ try:
 except ValueError:
     print("Variable times must be an integer")
 
-# Example input and output
+# example_folder input and output
 # Ex.1
 # input -> Hello
 # input -> Bye

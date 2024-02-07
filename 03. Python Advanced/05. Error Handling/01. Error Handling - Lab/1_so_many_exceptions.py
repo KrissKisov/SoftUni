@@ -10,7 +10,7 @@ for i in range(len(numbers_list)):
 
 print(float(result))
 
-# # Example code
+# # example_folder code
 #
 # numbers_list = int(input()).split(", ")
 # result = 1
@@ -24,7 +24,7 @@ print(float(result))
 #
 # print(total)
 
-# # Example input and output
+# # example_folder input and output
 #
 # 2, 5, 10 => 1.0
 # 4, 5, 6, 1, 3 => 10.0
