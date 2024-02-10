@@ -1,20 +1,39 @@
+# def gather_credits(needed_credits, *course_info):
+#     total_credits = 0
+#     courses = set()
+#
+#     while total_credits < needed_credits:
+#
+#         for course_name, current_credits in course_info:
+#
+#             if course_name not in courses:
+#                 courses.add(course_name)
+#                 total_credits += current_credits
+#
+#             if total_credits >= needed_credits:
+#                 break
+#
+#         else:
+#             break
+#
+#     if total_credits < needed_credits:
+#         credits_shortage = needed_credits - total_credits
+#         return f"You need to enroll in more courses! You have to gather {credits_shortage} credits more."
+#
+#     return f"Enrollment finished! Maximum credits: {total_credits}.\nCourses: {', '.join(sorted(courses))}"
+
 def gather_credits(needed_credits, *course_info):
     total_credits = 0
     courses = set()
 
-    while total_credits < needed_credits:
+    for course_name, current_credits in course_info:
 
-        for course_name, current_credits in course_info:
-
-            if course_name not in courses:
-                courses.add(course_name)
-                total_credits += current_credits
-
-            if total_credits >= needed_credits:
-                break
-
-        else:
+        if total_credits >= needed_credits:
             break
+
+        if course_name not in courses:
+            courses.add(course_name)
+            total_credits += current_credits
 
     if total_credits < needed_credits:
         credits_shortage = needed_credits - total_credits
