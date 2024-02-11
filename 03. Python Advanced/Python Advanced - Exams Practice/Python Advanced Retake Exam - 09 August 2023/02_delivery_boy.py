@@ -21,9 +21,6 @@ current_position = start_position
 while True:
     command = input()
 
-    if not command:
-        break
-
     r, c = current_position[0] + directions[command][0], current_position[1] + directions[command][1]
 
     if r not in range(rows) or c not in range(columns):
