@@ -6,7 +6,7 @@ class Section:
 
     def __init__(self, name: str):
         self.name = name
-        self.tasks: List = []
+        self.tasks: List[Task] = []
 
     def add_task(self, new_task: Task) -> str:
         if new_task in self.tasks:

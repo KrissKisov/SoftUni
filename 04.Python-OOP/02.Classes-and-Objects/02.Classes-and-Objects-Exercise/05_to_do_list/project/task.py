@@ -2,14 +2,10 @@ from typing import List
 
 
 class Task:
-    # comments: List = []
-    # completed: bool = False
-
     def __init__(self, name: str, due_date: str):
         self.name = name
         self.due_date = due_date
-        # The below two instance attributes may need to be class attributes!!!
-        self.comments: List = []
+        self.comments: List[str] = []
         self.completed: bool = False
 
     def change_name(self, new_name: str) -> str:
