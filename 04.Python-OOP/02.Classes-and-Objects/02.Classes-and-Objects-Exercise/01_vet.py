@@ -2,7 +2,7 @@ from typing import List
 
 
 class Vet:
-    animals: List = []
+    animals: List[str] = []
     space: int = 5
 
     def __init__(self, name: str):
@@ -11,20 +11,18 @@ class Vet:
 
     def register_animal(self, animal_name: str) -> str:
 
-        if Vet.space > 0:
+        if Vet.space > len(Vet.animals):
             self.animals.append(animal_name)
             Vet.animals.append(animal_name)
-            Vet.space -= 1
             return f"{animal_name} registered in the clinic"
 
         return "Not enough space"
 
     def unregister_animal(self, animal_name: str) -> str:
 
-        if animal_name in self.animals:
+        if animal_name in Vet.animals:
             self.animals.remove(animal_name)
             Vet.animals.remove(animal_name)
-            Vet.space += 1
             return f"{animal_name} unregistered successfully"
 
         return f"{animal_name} not in the clinic"
