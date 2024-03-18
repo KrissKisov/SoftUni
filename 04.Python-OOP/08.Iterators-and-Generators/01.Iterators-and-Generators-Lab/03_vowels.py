@@ -6,6 +6,9 @@ class vowels:
         self.vowels_in_string = [v for v in self.string if v.lower() in vowels.VOWELS]
         self.index = -1
 
+    # def __iter__(self):
+    #     return iter(self.vowels_in_string)
+
     def __iter__(self):
         return self
 
