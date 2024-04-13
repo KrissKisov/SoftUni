@@ -62,7 +62,7 @@ class Controller:
 
         car = available_cars[-1]
 
-        if driver.car:  # to check if needs to be 'if driver.car is not None'
+        if driver.car:
             old_car = driver.car
             driver.car = car
             car.is_taken = True
