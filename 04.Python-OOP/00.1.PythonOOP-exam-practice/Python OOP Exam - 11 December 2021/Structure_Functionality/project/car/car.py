@@ -24,7 +24,7 @@ class Car(ABC):
 
     @model.setter
     def model(self, value):
-        if len(value) < 4:  # TODO check if needs to be value.strip()
+        if len(value) < 4:
             raise ValueError(f"Model {value} is less than 4 symbols!")
 
         self.__model = value

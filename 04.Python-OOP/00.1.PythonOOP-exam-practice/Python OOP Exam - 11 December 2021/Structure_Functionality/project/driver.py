@@ -5,8 +5,7 @@ class Driver:
 
     def __init__(self, name: str):
         self.name = name
-        # self.car = None  # TODO check if need to remove typification
-        self.car: Car = None  # TODO check if need to remove typification
+        self.car: Car = None
         self.number_of_wins: int = 0  # increases with each won race
 
     @property
