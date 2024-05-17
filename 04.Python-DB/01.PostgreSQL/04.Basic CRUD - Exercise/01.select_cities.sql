@@ -1,4 +1,2 @@
-SELECT * 
-FROM 
-	cities
+SELECT * FROM cities
 ORDER BY id;
