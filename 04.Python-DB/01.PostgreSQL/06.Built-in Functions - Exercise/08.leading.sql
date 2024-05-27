@@ -1,6 +1,6 @@
 SELECT
 	continent_name,
-	TRIM(continent_name)
+	LTRIM(continent_name)
 FROM
 	continents
 ;
