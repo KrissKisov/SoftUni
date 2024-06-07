@@ -5,7 +5,7 @@ FROM
 WHERE 
 	salary > (
 		SELECT
-			AVG(salary)
+			AVG(salary) AS average_salary
 		FROM
 			employees
 	)
