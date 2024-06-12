@@ -9,22 +9,8 @@ WHERE
 INSERT INTO
 	monasteries(monastery_name, country_code)
 VALUES
-	('Hanga Abbey', (
-					SELECT 
-						country_code
-					FROM
-						countries
-					WHERE
-						country_name = 'Tanzania'
-					))
-	,('Myin-Tin-Daik', (
-						SELECT 
-							country_code
-						FROM
-							countries
-						WHERE
-							country_name = 'Myanmar'
-						))
+	('Hanga Abbey', (SELECT country_code FROM countries WHERE country_name = 'Tanzania'))
+	,('Myin-Tin-Daik', (SELECT country_code FROM countries WHERE country_name = 'Myanmar'))
 ;
 
 SELECT
@@ -33,14 +19,10 @@ SELECT
 	,COUNT(m.country_code) AS monasteries_count
 FROM
 	continents AS cont
-	JOIN 
-		countries AS coun
-	USING
-		(continent_code)
-		LEFT JOIN
-			monasteries AS m
-		USING
-			(country_code)
+	JOIN countries AS coun
+	USING(continent_code)
+		LEFT JOIN monasteries AS m
+		USING(country_code)
 WHERE
 	coun.three_rivers <> TRUE
 GROUP BY
