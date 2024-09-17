@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>ALL TASKS</h1>
+    <form method="get" action="/">
+        <input type="text" name="search_filter" value="{{ search_filter }}" placeholder="Search">
+        <button type="submit">Search</button>
+    </form>
+    <ul>
+        {% for task in tasks_list %}
+            <li>{{ task.name }}( {{ task.created_at }} ) -> {% if task.done %} Done {% else %} Not done yet {% endif %}</li>
+        {% empty %}
+            <h2>No results!</h2>
+        {% endfor %}
+    </ul>
+</body>
+</html>
